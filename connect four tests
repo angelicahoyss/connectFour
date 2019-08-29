@@ -1,0 +1,93 @@
+// function checkForDiagonalVictory1(col) {
+//     for (var i = 0; i < slots.length; i++){
+//         for (var x = 0; x < 33; x += 9;) {
+//     } var y = i + x;
+//
+//
+//     }
+//
+// }
+
+function checkForDiagonalVictory1() {
+    for (row = 0; row < slots.length - 3; row ++) {
+        for (col = 0; col < slots.eq(i) - 3; col++) {
+            if (slots[row][col].hasClass(currentPlayer)) && slots[row + 1][col + 1].hasClass(currentPlayer) && slots[row + 2][col + 2].hasClass(currentPlayer) && slots[row][col] == slots[row + 3][col + 3]) {
+                console.log("win");
+                return true;
+            }
+        }
+    }
+
+    function checkForDiagonalVictory1(slots) {
+        for (
+            var col = 0;
+            col <= slots.children().eq(row).length - 3;
+            col++
+        ) {
+            for (var row = 0; row < slots.children().length - 3; row++) {
+                if (
+                    slots
+                        .children()
+                        .eq(row)
+                        .children()
+                        .eq(col)
+                        .hasClass(currentPlayer) &&
+                    slots
+                        .children()
+                        .eq(row + 1)
+                        .children()
+                        .eq(col + 1)
+                        .hasClass(currentPlayer) &&
+                    slots
+                        .children()
+                        .eq(row + 2)
+                        .children()
+                        .eq(col + 2)
+                        .hasClass(currentPlayer) &&
+                    slots
+                        .children()
+                        .eq(row + 3)
+                        .children()
+                        .eq(col + 3)
+                        .hasClass(currentPlayer)
+                ) {
+                    console.log("diagonal win!");
+                    return true;
+                }
+            }
+        }
+    }
+    $(document).on("mousemove", function(e) {
+        var x = e.clientX; // innerWidth;
+        var y = e.clientY; // innerHeight;
+
+        currentPlayer.style.css("--mouse-x", x);
+        currentPlayer.style.css("--mouse-y", y);
+    });
+
+    $(document).on("mousemove", function(e) {
+        currentPlayer.offset({
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    // console.log(
+    //     $("#board")
+    //         .children()
+    //         .eq(0)
+    //         .children()
+    //         .eq(5)
+    //         .hasClass(currentPlayer)
+    // );
+    // console.log(
+    //     $("#board")
+    //         .children()
+    //         .eq(0)
+    // );
+    console.log(
+        $("#board")
+            .children()
+            .eq(0)
+            .children()
+            .eq(0)
+    );

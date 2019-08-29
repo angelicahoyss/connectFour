@@ -1,0 +1,203 @@
+@font-face {
+    font-family: GreyCliff-Heavy;
+    src: url(./fonts/GreyCliff/Greycliff-CF-Heavy.otf);
+}
+@font-face {
+    font-family: GreyCliff-Light;
+    src: url(./fonts/GreyCliff/Greycliff-CF-Light.otf);
+}
+@font-face {
+    font-family: GreyCliff-Medium;
+    src: url(./fonts/GreyCliff/Greycliff-CF-Medium.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #252525;
+    cursor: crosshair;
+}
+
+.board-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    align-self: center;
+    padding-right: 200px;
+    padding-bottom: 100px;
+}
+
+#connect {
+    font-family: GreyCliff-Heavy;
+    font-size: 100px;
+    color: #fdf5e6;
+    transform: rotate(270deg);
+    align-self: center;
+}
+
+#four {
+    font-family: GreyCliff-Heavy;
+    font-size: 100px;
+    color: #fdf5e6;
+    align-self: center;
+    padding-top: 30px;
+    z-index: 50;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.slot {
+    width: 110px;
+    height: 110px;
+    background-color: #252525;
+    padding: 10px 0 0 10px;
+}
+
+.hole {
+    width: 90px;
+    height: 90px;
+    background-color: #323232;
+    border-radius: 45px;
+}
+
+.player1 .hole {
+    background: #ffa07a;
+}
+
+.player2 .hole {
+    background: #6495ed;
+}
+
+.cursor {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #6495ed;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#popup {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    text-align: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+#modal-dialog {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 200;
+}
+
+#initial-popup {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    text-align: center;
+    justify-content: center;
+    z-index: 200;
+}
+#initial-modal-dialog {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+}
+
+#initial-message {
+    font-family: GreyCliff-Heavy;
+    font-size: 60px;
+    color: #fdf5e6;
+    margin-bottom: 50px;
+}
+
+#modalCloseBtn {
+    height: 110px;
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+    background-color: #252525;
+    border: 0px;
+    font-family: GreyCliff-Light;
+    color: #ffa07a;
+    font-size: 30px;
+}
+
+#winner-message {
+    color: #ffdab9;
+    font-family: GreyCliff-Heavy;
+    font-size: 100px;
+}
+
+#player-one-name {
+    -webkit-appearance: none;
+    outline: none;
+    height: 50px;
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+    background-color: #252525;
+    border: 0px;
+    outline-width: 0;
+    font-family: GreyCliff-Light;
+    color: #ffa07a;
+    font-size: 30px;
+    text-align: center;
+}
+
+#player-two-name {
+    -webkit-appearance: none;
+    outline: none;
+    height: 50px;
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+    background-color: #252525;
+    border: 0px;
+    outline-width: 0;
+    font-family: GreyCliff-Light;
+    font-size: 30px;
+    text-align: center;
+    color: #6495ed;
+}
+#start-game-btn {
+    /* height: 100px;
+    width: 200px; */
+    align-self: center;
+    margin-top: 10px;
+    background-color: #252525;
+    border: 0px;
+    font-family: GreyCliff-Heavy;
+    font-size: 100px;
+    color: #ffa07a;
+}
+input::placeholder {
+    color: #ffdab9;
+}
