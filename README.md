@@ -3,4 +3,4 @@ https://angelicahoyss.github.io/connectFour/
 
 ## Preview
 
-<img src='./connectfour.gif' />
+<img src='./connectfour.gif'/>
