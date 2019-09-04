@@ -1,2 +1,6 @@
 # Connect Four Game
-https://angelicahoyss.github.io/connect-four-game/
+https://angelicahoyss.github.io/connectFour/
+
+## Preview
+
+<img src='./connectfour.gif' />
